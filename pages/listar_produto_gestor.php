@@ -71,6 +71,7 @@ foreach($produtos as $produto){
         $statusProduto = 'INDISPONíVEL';
     }else{
         $statusProduto = "INDETERMINADO";
+
     }if($produto->qde_produto == 0 OR $produto->id_qde_produto = NULL){
         $quant = "EM FALTA";
         $statusProduto = 'INDISPONíVEL';
@@ -157,7 +158,9 @@ require './../includes/menu_gestor.php';
                     <th>Status</th>
                     <th>Quantidade</th>
                     <th>Valor AZCoin</th>
-                    <th colspan="2">Editar/Excluir</th>
+                    <!-- <th colspan="2">Editar/Excluir</th> -->
+                    <th>Editar</th>
+                    <th>Excluir</th>
                 </tr>
             </thead>
             <tbody class="tabela">
