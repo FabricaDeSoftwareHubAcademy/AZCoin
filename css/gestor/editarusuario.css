@@ -216,6 +216,12 @@
   .caixa-input .input:focus ~ .barra:after {
     width: 50%;
   }
+
+/* Incluido em 2024.06.27 para teste (ver editar_user_gestor.php linha 111) */
+  .radio_label{
+    background-color: yellow;
+  }
+
   /* Fim Input com Span Subindo */
   /*botões*/
   .radio-button {

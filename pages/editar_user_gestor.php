@@ -104,9 +104,15 @@ require './../includes/menu_gestor.php';
                         <input type='file' accept='image/*' onchange='openFile(event)' id="fotoUser" name="fotoUsuario"> <br>
                         <img id='output' src="<?=$obUser->imagem?>">
                     </div>
+                    <!-- Apenas teste - para ver se aparece isso -->
+                    <h1 style="z-index: 10; color: red;">Teste</h1>
                 </div>
 
                 <div class="radio-container">
+                    
+                    <!-- Incluindo em 27.06.2024 apenas para teste (ver cadastro.css linha 109 e editarusuario.css linha 220) -->
+                    <h1 class="radio_label" style="color: white;">Perfil:</h1>
+
                     <div class="radio-button">
                         <input class="option1" type="radio" name="perfil" value="1" <?=$obUser->id_perfil_usuario == '1' ? 'checked' : ''?>>
                         <span class="radio"></span>
