@@ -55,7 +55,16 @@ $obSumFeedbacks = Feedback::selectSumFeedbacks($usuarioLogado['id_usuario'], $ob
 $azcoins_recebidos = $obCarteira->saldo_recebido_feedback;
 $azcoins_enviar = ($obCarteira->valor_recebido_campanha - $obSumFeedbacks->sum);
 
-
+    // $obCarteira = new Carteira;
+    // $obCarteira::getCarteiras();
+    // echo "<pre>"; echo "teste </br>"; print_r($obCarteira); echo "</pre>";
+echo "<pre>";
+echo "dump na variavel '$azcoins_recebidos' :";
+echo "</br>";
+print_r ($azcoins_recebidos);
+echo "</pre>";
+echo "</br>";
+// exit;
 
 $azcoins_recebidos = $azcoins_recebidos>0 ? $azcoins_recebidos : '0';
 $azcoins_enviar = $azcoins_enviar>0 ? $azcoins_enviar : '0';
