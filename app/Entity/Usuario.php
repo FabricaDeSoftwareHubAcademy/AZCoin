@@ -83,43 +83,41 @@ class Usuario{
      * Método responsável por atualizar um usuário no banco de dados
      * @return boolean
      */
-    // public function atualizar(){
-    //     return (new Database('usuario'))->update('id_usuario = '.$this->id_usuario,[
-    //         'nome'                      => $this->nome,
-    //         'email'                     => $this->email,
-    //         'senha'                     => $this->senha,
-    //         'apelido'                   => $this->apelido,
-    //         'imagem'                    => $this->imagem,
-    //         'id_perfil_usuario'         => $this->id_perfil_usuario,
-    //         'id_status_user'            => $this->id_status_user,
-    //     ]);
-    // }
-
-    // APENAS PARA TESTE 
+    
     public function atualizar(){
+        return (new Database('usuario'))->update('id_usuario = '.$this->id_usuario,[
+            'nome'                      => $this->nome,
+            'email'                     => $this->email,
+            'senha'                     => $this->senha,
+            'apelido'                   => $this->apelido,
+            'imagem'                    => $this->imagem,
+            'id_perfil_usuario'         => $this->id_perfil_usuario,
+            'id_status_user'            => $this->id_status_user,
+        ]);
+    }
 
-        $atual = new PDO('pgsql:host=localhost;dbname=AZMerit', 'postgres','1234');
 
-        $sql = "UPDATE usuario SET nome = ?, email = ?, senha = ?, apelido = ?, imagem = ?, id_perfil_usuario =?, id_status_user =?";
+    // -------------------------------------------------------------------------------
+    // APENAS PARA TESTE 
+    // public function atualizar(){
 
-        $stmt = $atual->prepare($sql);
+    //     $atual = new PDO('pgsql:host=localhost;dbname=AZMerit', 'postgres','1234');
 
-        $stmt->bindParam(1, $this->nome, PDO::PARAM_STR);
-        $stmt->bindParam(2, $this->email, PDO::PARAM_STR);
-        $stmt->bindParam(3, $this->senha, PDO::PARAM_STR);
-        $stmt->bindParam(4, $this->apelido, PDO::PARAM_STR);
-        $stmt->bindParam(5, $this->imagem, PDO::PARAM_STR);
-        $stmt->bindParam(6, $this->id_perfil_usuario, PDO::PARAM_INT);
-        $stmt->bindParam(7, $this->id_status_user, PDO::PARAM_INT);
+    //     $sql = "UPDATE usuario SET nome = ?, email = ?, senha = ?, apelido = ?, imagem = ?, id_perfil_usuario =?, id_status_user =? WHERE id_usuario = $this->id_usuario";
 
-        $stmt->execute();
+    //     $stmt = $atual->prepare($sql);
 
-        return true;
+    //     $stmt->bindParam(1, $this->nome, PDO::PARAM_STR);
+    //     $stmt->bindParam(2, $this->email, PDO::PARAM_STR);
+    //     $stmt->bindParam(3, $this->senha, PDO::PARAM_STR);
+    //     $stmt->bindParam(4, $this->apelido, PDO::PARAM_STR);
+    //     $stmt->bindParam(5, $this->imagem, PDO::PARAM_STR);
+    //     $stmt->bindParam(6, $this->id_perfil_usuario, PDO::PARAM_INT);
+    //     $stmt->bindParam(7, $this->id_status_user, PDO::PARAM_INT);
 
-        // $res = $stmt->fetch(PDO::FETCH_ASSOC);
+    //     $stmt->execute();
 
-        // return $res;
-
+    //     return true;
 
 
 
@@ -133,8 +131,8 @@ class Usuario{
         //     'id_perfil_usuario'         => $this->id_perfil_usuario,
         //     'id_status_user'            => $this->id_status_user
         // ]);
-        // return $atual;
-    }
+        // return true;
+    // }
 
     /**
      * Método responsável por excluir um usuário do banco de dados
