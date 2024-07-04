@@ -114,23 +114,26 @@ class Usuario{
 
         $stmt->execute();
 
-        $res = $stmt->fetch(PDO::FETCH_ASSOC);
+        return true;
 
-        return $res;
+        // $res = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        // return $res;
 
 
 
-        $atual = new Database;
-        $atual('usuario')->update('id_usuario = '.$this->id_usuario,[
-            'nome'                      => $this->nome,
-            'email'                     => $this->email,
-            'senha'                     => $this->senha,
-            'apelido'                   => $this->apelido,
-            'imagem'                    => $this->imagem,
-            'id_perfil_usuario'         => $this->id_perfil_usuario,
-            'id_status_user'            => $this->id_status_user
-        ]);
-        return $atual;
+
+        // $atual = new Database;
+        // $atual('usuario')->update('id_usuario = '.$this->id_usuario,[
+        //     'nome'                      => $this->nome,
+        //     'email'                     => $this->email,
+        //     'senha'                     => $this->senha,
+        //     'apelido'                   => $this->apelido,
+        //     'imagem'                    => $this->imagem,
+        //     'id_perfil_usuario'         => $this->id_perfil_usuario,
+        //     'id_status_user'            => $this->id_status_user
+        // ]);
+        // return $atual;
     }
 
     /**
